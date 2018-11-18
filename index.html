@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td { background: #000;  border: none}
+        table {  width: 500px;  height: 500px;  margin: 0 auto;}
+        tr:nth-child(even) td:nth-child(even), tr:nth-child(odd) td:nth-child(odd){
+            background: #fff;
+            }
+            body {
+                  text-align: center;
+                     background: #c3c3c3;}
+    </style>
+</head>
+<body>
+<script>
+    var table = document.createElement("table");
+    for (let i = 0; i < 9; i++) {
+        var tr = document.createElement("tr");
+        for (let j = 0; j < 9; j++) {
+            var td = document.createElement("td"); 
+            tr.appendChild(td);            
+        }
+        table.appendChild(tr);
+    }
+    document.body.appendChild(table);
+</script>    
+</body>
+</html>
